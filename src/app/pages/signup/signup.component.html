@@ -1,0 +1,70 @@
+<div class="min-h-screen w-full bg-gradient-to-br 
+            from-[#2A0F4F] via-[#3E0C6E] to-[#0A1A7E]
+            flex items-center justify-center px-4">
+
+  <div class="w-full max-w-md p-8 rounded-2xl shadow-xl
+              bg-gradient-to-br from-white/10 to-white/5 
+              backdrop-blur-xl border border-white/20">
+
+    <h1 class="text-3xl font-bold text-white text-center mb-2">
+      Create Account
+    </h1>
+
+    <p class="text-purple-200 text-center mb-6">
+      Sign up to continue
+    </p>
+
+    <!-- Name -->
+    <input
+      [(ngModel)]="name"
+      type="text"
+      placeholder="Full Name"
+      class="w-full mb-4 p-4 rounded-xl 
+             bg-[#0F1224]/70 text-white 
+             border border-white/10 
+             placeholder-gray-400
+             focus:outline-none focus:ring-2 focus:ring-purple-400"
+    />
+
+    <!-- Email -->
+    <input
+      [(ngModel)]="email"
+      type="email"
+      placeholder="Email"
+      class="w-full mb-4 p-4 rounded-xl 
+             bg-[#0F1224]/70 text-white 
+             border border-white/10 
+             placeholder-gray-400
+             focus:outline-none focus:ring-2 focus:ring-purple-400"
+    />
+
+    <!-- Password -->
+    <input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Password"
+      class="w-full mb-6 p-4 rounded-xl 
+             bg-[#0F1224]/70 text-white 
+             border border-white/10 
+             placeholder-gray-400
+             focus:outline-none focus:ring-2 focus:ring-purple-400"
+    />
+
+    <!-- Signup Button -->
+    <button
+      (click)="signup()"
+      class="w-full py-3 rounded-xl text-white font-semibold
+             bg-gradient-to-r from-[#A020F0] via-[#7A3CF7] to-[#2563EB]
+             hover:opacity-90 transition">
+      Create Account
+    </button>
+
+    <!-- Link to Signin -->
+    <p class="text-center text-gray-300 text-sm mt-4">
+      Already have an account?
+      <a routerLink="/signin" class="text-purple-300 hover:underline">Sign in</a>
+    </p>
+
+  </div>
+
+</div>

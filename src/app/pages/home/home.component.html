@@ -1,0 +1,29 @@
+
+<div class="min-h-screen bg-gradient-to-br from-[#2A0F4F] via-[#3E0C6E] to-[#0A1A7E] flex flex-col items-center justify-center bg-gray-50 px-6">
+
+  <h1 class="text-4xl font-bold text-gray-100 mb-2">MockGenAI</h1>
+  <p class="text-gray-300 mb-8 text-center max-w-xl">
+    Generate database schemas and mock APIs from natural language descriptions.
+  </p>
+
+  <div class="w-full max-w-3xl p-8 rounded-2xl shadow-xl
+            bg-gradient-to-br from-white/4 to-white/3
+            backdrop-blur-xl border border-white/20">
+    
+    <textarea
+        [(ngModel)]="prompt"
+      rows="8"
+      placeholder="Describe your project... (e.g., a user management system for an e-commerce app)"
+      class="w-full p-4 bg-[#0F1224]/60 rounded-lg focus:outline-none border border-white/20 placeholder-gray-400 text-white">
+    </textarea>
+
+    <button
+      (click)="generate()"
+      [disabled]="loading"
+      class="w-full mt-4 py-3 bg-gradient-to-br from-white/10 border border-white/20 hover:bg-blue-900 text-white font-semibold rounded-lg transition">
+      {{ loading ? 'Generating...' : 'Generate' }}
+    </button>
+
+  </div>
+
+</div>
